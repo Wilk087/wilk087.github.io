@@ -1,0 +1,58 @@
+html, body {
+    font-family: 'Cinzel', serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+input, textarea {   
+    font-family: 'Cinzel', serif;
+    height: 40%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    font-size: larger;
+}
+.container {
+    font-family: 'Cinzel', serif;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap property */
+}
+
+.container > * {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusted calculation for greater gaps */
+    margin: 10px; /* Increased margin */
+}
+.section {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+}
+.section label {
+    font-family: 'Cinzel', serif;
+    display: block;
+    margin-bottom: 5px;
+}
+.section input, .section textarea {
+    font-family: 'Cinzel', serif;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #e0e0e0;
+}

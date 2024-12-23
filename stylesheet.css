@@ -1,0 +1,89 @@
+html, body {
+    font-family: 'Cinzel', serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+br {
+    user-select: none;
+}
+
+#input {
+    display: flex;
+    flex-direction: row; /* Arrange elements horizontally */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add space between elements */
+    margin-top: 20px;
+    width: auto;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    color: #e0e0e0;
+}
+
+select {
+    font-family: 'Cinzel', serif;
+    width: auto; /* Updated width */
+    padding: 10px;
+    padding-right: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin-top: 0; /* Removed top margin */
+    margin-right: 10px; /* Added right margin */
+}
+
+button {
+    font-family: 'Cinzel', serif;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    cursor: pointer;
+    margin-top: 0; /* Ensure alignment with select */
+}
+
+p {
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    color: #e0e0e0;
+}

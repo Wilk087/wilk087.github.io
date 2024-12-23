@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+    <link rel="stylesheet" href="stylesheet.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js"></script>
+    <script src="dice.js"></script>
+
+</head>
+<body>
+    <div class="burger-menu">
+        <div class="burger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="mobile-menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Dice</a></li>
+                <li><a href="charsheet.html">Character Sheet</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>Dice Roll</h1>
+    <div id="input">
+        <select id="dice">
+            <option value="4">D4</option>
+            <option value="6">D6</option>
+            <option value="8">D8</option>
+            <option value="10">D10</option>
+            <option value="12">D12</option>
+            <option value="20">D20</option>
+            <option value="100">D100</option>
+        </select>
+        <button onclick="rollDice(document.getElementById('dice').value)">Roll</button>
+    </div>
+
+    <div id="output">
+        <p id="resultOutput"></p>
+    </div>
+</body>
+</html>
