@@ -25,19 +25,19 @@ function displayCharacters() {
     
     importedCharacters.forEach(characterData => {
         let summary = `
-            <div class="player-summary" 
-                 style="border:1px solid #333;
-                        margin-bottom:10px;
-                        padding:10px;
-                        border-radius:5px;
-                        font-size:0.6rem;">
+            <div class="player-summary">
         `;
         for (const field in characterData) {
-            summary += `<p style="font-size: 1rem"><strong>${field}:</strong> ${characterData[field]}</p>`;
+            summary += `<p><strong>${capitalize(field)}:</strong> ${characterData[field]}</p>`;
         }
         summary += '</div>';
         container.innerHTML += summary;
     });
+}
+
+// Utility function to capitalize field names
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 // Import and parse multiple JSON files

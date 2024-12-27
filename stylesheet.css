@@ -9,10 +9,6 @@ html, body {
     color: #e0e0e0;
 }
 
-br {
-    user-select: none;
-}
-
 #input {
     display: flex;
     flex-direction: row; /* Arrange elements horizontally */
@@ -55,52 +51,43 @@ button {
     margin-top: 0; /* Ensure alignment with select */
 }
 
-p {
-    text-align: center;
-    font-size: 100px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-shadow: 2px 2px 4px #000;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    flex-direction: column;
-}
-
-#output {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1e1e1e;
-    border: 1px solid #333;
+#players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Space between grid items */
+    width: 100%;
+    max-width: 1200px; /* Optional: limit the maximum width */
+    margin: 20px auto; /* Center the container with some top margin */
     padding: 10px;
+}
+
+/* Style each player summary card */
+.player-summary {
+    border: 1px solid #333;
+    padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 0 5px #333;
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
+    background-color: #1e1e1e;
     color: #e0e0e0;
+    box-shadow: 0 0 5px #333;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#dice-animation {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background-color: #f1c40f;
-    border-radius: 10px;
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform-origin: center;
-    animation: dice-animation 1s ease-in-out forwards;
+/* Add a hover effect for better interactivity */
+.player-summary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #555;
 }
 
+/* Style the paragraphs within player-summary */
+#players .player-summary p {
+    font-size: 1rem;
+    margin: 5px 0;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #players {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
