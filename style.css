@@ -56,3 +56,19 @@ input, textarea {
     border-radius: 4px;
     color: #e0e0e0;
 }
+
+button {
+    font-family: 'Cinzel', serif;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    cursor: pointer;
+    margin-top: 0; /* Ensure alignment with select */
+}
+
+button:hover {
+    background-color: #333;
+}
