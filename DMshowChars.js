@@ -1,5 +1,22 @@
 // Maintain an array of all loaded characters
 let importedCharacters = [];
+// Save characters to localStorage
+function saveToLocalStorage() {
+    localStorage.setItem('characters', JSON.stringify(importedCharacters));
+}
+
+// Load characters from localStorage
+function loadFromLocalStorage() {
+    const storedCharacters = localStorage.getItem('characters');
+    if (storedCharacters) {
+        try {
+            importedCharacters = JSON.parse(storedCharacters);
+            displayCharacters();
+        } catch (error) {
+            console.error('Error loading characters from localStorage:', error);
+        }
+    }
+}
 
 // Display all characters in #players, using an even smaller font
 function displayCharacters() {
@@ -44,6 +61,7 @@ function importFromFile() {
                 } else {
                     importedCharacters.push(jsonData);
                 }
+                saveToLocalStorage();
             } catch (error) {
                 alert('Invalid JSON file format');
                 console.error(error);
@@ -76,7 +94,6 @@ function exportToJsonFile() {
     URL.revokeObjectURL(url);
 }
 
-// Clear loaded data and reset file input
 function clearCharacters() {
     importedCharacters = [];
     const container = document.getElementById('players');
@@ -86,9 +103,12 @@ function clearCharacters() {
     if (fileInput) {
         fileInput.value = '';
     }
+    saveToLocalStorage();
 }
+
 
 // Optional: automatically display characters on page load
 window.onload = function() {
+    loadFromLocalStorage();
     displayCharacters();
 };
