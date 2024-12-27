@@ -1,24 +1,25 @@
-function saveToLocalStorage() {
+function saveToCookies() {
     const inputs = document.querySelectorAll('input, textarea');
     inputs.forEach(input => {
-        localStorage.setItem(input.id, input.value);
+        document.cookie = `${input.id}=${input.value}; path=/`;
     });
 }
 
-function loadFromLocalStorage() {
-    const inputs = document.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        const value = localStorage.getItem(input.id);
-        if (value !== null) {
+function loadFromCookies() {
+    const cookies = document.cookie.split('; ');
+    cookies.forEach(cookie => {
+        const [name, value] = cookie.split('=');
+        const input = document.getElementById(name);
+        if (input) {
             input.value = value;
         }
     });
 }
 
 window.onload = function() {
-    loadFromLocalStorage();
+    loadFromCookies();
     const inputs = document.querySelectorAll('input, textarea');
     inputs.forEach(input => {
-        input.addEventListener('input', saveToLocalStorage);
+        input.addEventListener('input', saveToCookies);
     });
 }

@@ -1,5 +1,6 @@
 // Maintain an array of all loaded characters
 let importedCharacters = [];
+
 // Save characters to localStorage
 function saveToLocalStorage() {
     localStorage.setItem('characters', JSON.stringify(importedCharacters));
@@ -106,9 +107,8 @@ function clearCharacters() {
     saveToLocalStorage();
 }
 
-
-// Optional: automatically display characters on page load
-window.onload = function() {
+// Automatically display characters on page load
+window.addEventListener('load', function() {
     loadFromLocalStorage();
     displayCharacters();
-};
+});
