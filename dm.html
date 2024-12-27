@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DM Overview</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js"></script>
+    <script src="saveChar.js"></script>
+    <script src="DMshowChars.js"></script>
+</head>
+<body>
+    <div class="burger-menu">
+        <div class="burger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="mobile-menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Dice</a></li>
+                <li><a href="charsheet.html">Character Sheet</a></li>
+                <li><a href="dm.html">DM Overview</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>DM Overview</h1>
+    <div>
+        <input type="file" id="fileInput" accept=".json" />
+        <button onclick="importFromFile()">Import Characters</button>
+        <button onclick="clearCharacters()">Clear</button>
+    </div>
+    <div id="players"></div>
+</body>
+</html>

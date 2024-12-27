@@ -87,3 +87,20 @@ p {
     margin-top: 20px;
     color: #e0e0e0;
 }
+
+#dice-animation {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #f1c40f;
+    border-radius: 10px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform-origin: center;
+    animation: dice-animation 1s ease-in-out forwards;
+}
+

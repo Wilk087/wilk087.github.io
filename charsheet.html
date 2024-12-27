@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="menu.css">
     <script src="menu.js"></script>
     <script src="saveChar.js"></script>
+    <script src="DMshowChars.js"></script>
 </head>
 
 <body>
@@ -23,6 +24,7 @@
             <ul>
                 <li><a href="index.html">Dice</a></li>
                 <li><a href="charsheet.html">Character Sheet</a></li>
+                <li><a href="dm.html">DM Overview</a></li>
             </ul>
         </nav>
     </div>
@@ -78,6 +80,9 @@
             <label for="otherNotes">Other Notes</label>
             <textarea id="otherNotes" rows="5"></textarea>
         </div>
+    </div>
+    <div class="section">
+        <button onclick="exportToJsonFile()">Export as JSON</button>
     </div>
 </body>
 
